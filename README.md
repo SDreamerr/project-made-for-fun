@@ -1,19 +1,21 @@
-# 🚀 Bank Account System — Day 2
+# 📝 C Task Manager (Day 3 Project)
 
-This project was created purely for fun, amusement, and practicing structure arrays and string comparisons in C. Inside lies a console-based banking management system packed with custom user features.
+A simple Command Line Interface (CLI) task manager written in **C** during my 3rd day of learning programming. It allows managing tasks and saving them to a file.
 
-## 📅 Daily Project Challenge
-This is **Day 2** of my personal challenge! I will be uploading new projects every single day (if I can). Stay tuned to see what comes next!
+## ✨ Features
+* ➕ **Add Tasks:** Create new tasks and save them directly to a `tasks.txt` file.
+* 📋 **View All:** List all created tasks with their current status.
+* ✅ **Mark as Done:** Update the status of specific tasks.
+* 🔍 **Filter Completed:** View only the tasks that have been marked as done.
+* ❌ **Delete Tasks:** Remove unwanted tasks from the active list.
 
-## 📦 What's Inside?
-Inside is a console **Bank System** that allows users to register accounts, handle deposit and withdrawal transactions, review all open accounts, and track down the richest client.
+## 🛠 Tech Stack
+* **Language:** C
+* **Concepts Used:** Structs, Dynamic Memory Allocation (`malloc`, `realloc`), File I/O, Pointers.
 
-### 🛠️ Unique Project Features:
-* **Friendly Easter Egg Filter:** A custom menu exception is integrated for curious input actions. Try entering `7` in the main menu to see it prompt a reality check.
-* **Global Registry Engine:** Seamless dynamic index shifting (`count++`) manages multiple unique account states in static structure blocks.
+## 🚀 How to Run on Linux
 
-## 🚀 How to Run
-Just download and launch the pre-compiled **`bank.exe`** file on Windows via your command prompt or terminal.
-
-## 🤝 License and Contributing
-This project is distributed under the "it works, don't touch it" philosophy. If you want to add new menu features or tweak the logic, feel free to open an Issue or submit a Pull Request!
+### 1. Compile the code:
+Open your terminal and compile the file using `gcc` (available via `nix-shell -p gcc` if you are on NixOS):
+```bash
+gcc taskmgr.c -o taskmgr

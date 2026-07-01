@@ -1,21 +1,22 @@
-# 📝 C Task Manager (Day 3 Project)
+# 📝 C Notes Manager (Day 4 Project)
 
-A simple Command Line Interface (CLI) task manager written in **C** during my 3rd day of learning programming. It allows managing tasks and saving them to a file.
+A modular, file-based Notes Manager written in **C** during my 4th day of learning programming. This project shifts from terminal-only structures to creating, reading, and managing physical `.txt` files on your drive, featuring a multi-file architecture.
 
 ## ✨ Features
-* ➕ **Add Tasks:** Create new tasks and save them directly to a `tasks.txt` file.
-* 📋 **View All:** List all created tasks with their current status.
-* ✅ **Mark as Done:** Update the status of specific tasks.
-* 🔍 **Filter Completed:** View only the tasks that have been marked as done.
-* ❌ **Delete Tasks:** Remove unwanted tasks from the active list.
+* 📂 **File Generation:** Automatically creates and saves each note as an individual `.txt` file.
+* 📋 **Show All:** Reads and outputs the contents of all active notes directly to the terminal.
+* 🔍 **Keyword Search:** Scans through the text inside files using `strstr` to find specific keywords.
+* 📂 **Load Existing Files:** Links external `.txt` files into the current app session tracker.
+* ❌ **Hard Delete:** Permanently removes `.txt` files from the disk using the C `remove()` function.
 
-## 🛠 Tech Stack
+## 🛠 Tech Stack & Architecture
 * **Language:** C
-* **Concepts Used:** Structs, Dynamic Memory Allocation (`malloc`, `realloc`), File I/O, Pointers.
+* **Structure:** Modular architecture (`.c` source files and `.h` header file).
+* **Key Concepts:** Global states (`extern`), File Systems (`fopen`/`fclose`), Dynamic Array Resizing (`realloc`), and String Manipulation (`strcat`, `strcmp`).
 
 ## 🚀 How to Run on Linux
 
-### 1. Compile the code:
-Open your terminal and compile the file using `gcc` (available via `nix-shell -p gcc` if you are on NixOS):
+### 1. Compile the modular project:
+Since the code is split across multiple source files, compile them all together using `gcc`:
 ```bash
-gcc taskmgr.c -o taskmgr
+gcc notes.c func.c -o notes
